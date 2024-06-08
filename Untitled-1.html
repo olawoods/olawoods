@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prom Invitation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .question {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .letter {
+            display: none;
+            margin-top: 20px;
+        }
+        .links {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Will you go to PROM with me?</div>
+        <div class="buttons">
+            <button class="button" onclick="showResponse('yes')">Yes</button>
+            <button class="button" onclick="showResponse('no')">No</button>
+        </div>
+        <div class="letter" id="yesLetter">
+            SIIIIIIIIIIII, yea um, I,d rather do this this way bc, Im not a good communicator, but through music i can always say what is want to say, and all these songs say, are about how cool and beautiful u are, ur vibe, how u have great aspirations, and how 'preciosa' u look, ALL these songs are about u and the lyrics are about u.If you're seeing this u prolly pressed yes, so Im so happy to go to prom w u. Enjoy the songs, some of my best shi since i ever started making music, but yea, the best deserve the best : 
+        </div>
+        <div class="letter" id="noLetter">
+            I understand and I respect ur decision, anyway the songs are still urs I want the songs to fufill their purpose, have a great time
+        </div>
+        <div class="links" id="songLinks">
+            <!-- Add your song links here -->
+           <a href="https://jmp.sh/s/faduSwu9AZlikvP4l7uW">EYES</a><br>
+            <a href="https://jmp.sh/s/lzjz2Ec8UE0gtrlDGR9z">BAILA CONMIGO </a><br>
+            <a href="https://jmp.sh/s/ahbXL5YTAsTosIrkDVfH">PROM</a><br>
+            <a href="https://drive.google.com/file/d/1SIXW4Sz4VD-FyS1JjpZaZ9V1Fvz6oDbf/view?usp=sharing">C'EST LA VIE</a><br>
+        </div>
+    </div>
+
+    <script>
+        function showResponse(response) {
+            document.getElementById('yesLetter').style.display = 'none';
+            document.getElementById('noLetter').style.display = 'none';
+            document.getElementById('songLinks').style.display = 'block';
+
+            if (response === 'yes') {
+                document.getElementById('yesLetter').style.display = 'block';
+            } else {
+                document.getElementById('noLetter').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
